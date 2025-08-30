@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm create:*)",
+      "mcp__magic__21st_magic_component_builder",
+      "Bash(./scripts/dev.sh:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__filesystem__directory_tree",
+      "mcp___magicuidesign_mcp__getUIComponents",
+      "mcp___magicuidesign_mcp__getSpecialEffects",
+      "mcp___magicuidesign_mcp__getButtons",
+      "mcp___magicuidesign_mcp__getComponents",
+      "mcp___magicuidesign_mcp__getBackgrounds",
+      "Bash(git reset:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

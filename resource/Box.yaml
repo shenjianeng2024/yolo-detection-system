@@ -1,0 +1,7 @@
+train: /mnt/workspace/yolov8_dataset/train/images
+val: /mnt/workspace/yolov8_dataset/val/images # 验证集, 每训练一次比对用的
+test: /mnt/workspace/yolov8_dataset/test/images # 测试集
+nc: 2  # 类别数
+names: 
+ 0: 异常
+ 1: 正常
