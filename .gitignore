@@ -59,4 +59,4 @@ resource/
 # Python virtual environments
 .venv/
 *.pyc
-__pycache__/
+__pycache__/.serena/cache/
