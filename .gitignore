@@ -52,3 +52,11 @@ temp/
 # Generated files
 *.gen.ts
 *.generated.ts
+
+# Resource directory with datasets and models
+resource/
+
+# Python virtual environments
+.venv/
+*.pyc
+__pycache__/

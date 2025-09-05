@@ -5,31 +5,55 @@ description = "YOLOv8 Real-time Detection System"
 authors = ["you"]
 edition = "2021"
 
-[lib]
-name = "app_lib"
-crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
 tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tokio = { version = "1", features = ["full"] }
-# YOLO 模型推理支持 (暂时注释以加速编译)
-# ort = { version = "2.0", optional = true }
-# candle-core = { version = "0.6", optional = true }
-# candle-nn = { version = "0.6", optional = true }
-# candle-onnx = { version = "0.6", optional = true }
-# image = "0.25"
-# base64 = "0.22"
+
+# Candle 机器学习框架
+candle-core = "0.9"
+candle-onnx = "0.9" 
+candle-nn = "0.9"
+candle-transformers = "0.9"
+
+# 图像处理
+image = { version = "0.25", features = ["jpeg", "png", "bmp"] }
+imageproc = "0.25"
+rusttype = "0.9"
+base64 = "0.22"
+
+# 数值计算
+ndarray = "0.15"
+
+# 错误处理和序列化
+anyhow = "1.0"
+thiserror = "1.0"
+prost = "0.12"
+
+# 异步处理
+futures = "0.3"
+tokio-stream = "0.1"
+
+# 性能和同步
+parking_lot = "0.12"
+chrono = { version = "0.4", features = ["serde"] }
+tauri-plugin-fs = "2.4.2"
 
 [features]
-default = []
-# onnx-runtime = ["ort"]
-# candle = ["candle-core", "candle-nn", "candle-onnx"]
+default = ["yolo-detection"]
+yolo-detection = []
 
 [[bin]]
 name = "yolo-detection-system"
 path = "src/main.rs"
+
+# 基准测试二进制 - 临时注释以避免tauri冲突
+# [[bin]]
+# name = "benchmark"
+# path = "src/bin/benchmark.rs"
