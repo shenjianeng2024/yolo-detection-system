@@ -60,3 +60,4 @@ resource/
 .venv/
 *.pyc
 __pycache__/.serena/cache/
+.serena/

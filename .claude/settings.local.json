@@ -58,7 +58,9 @@
       "mcp__serena__think_about_whether_you_are_done",
       "mcp__serena__create_text_file",
       "Bash(git remote add:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(git rm:*)",
+      "Bash(git check-ignore:*)"
     ],
     "deny": [],
     "ask": []
