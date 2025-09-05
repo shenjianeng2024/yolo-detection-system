@@ -56,7 +56,8 @@
       "mcp__serena__switch_modes",
       "mcp__serena__get_symbols_overview",
       "mcp__serena__think_about_whether_you_are_done",
-      "mcp__serena__create_text_file"
+      "mcp__serena__create_text_file",
+      "Bash(git remote add:*)"
     ],
     "deny": [],
     "ask": []
